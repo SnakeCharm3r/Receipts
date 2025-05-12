@@ -23,3 +23,34 @@
   <link rel="stylesheet" href="{{ asset('css/app-dark.css') }}" id="darkTheme" disabled>
 </head>
 <body class="vertical light">
+  @include('partials.navbar') <!-- Include Navbar -->
+  @include('partials.sidebar') <!-- Include Sidebar -->
+
+  <div class="main-content">
+    <!-- Your content goes here -->
+  </div>
+
+  <!-- Theme Toggle Button (Placed in Navbar or Sidebar) -->
+  <button id="theme-toggle" class="btn btn-sm btn-light">Toggle Theme</button>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+      // Toggle body class for theme
+      document.body.classList.toggle('dark');
+      document.body.classList.toggle('light');
+      
+      // Toggle theme stylesheets
+      const lightTheme = document.getElementById('lightTheme');
+      const darkTheme = document.getElementById('darkTheme');
+      if (document.body.classList.contains('dark')) {
+        lightTheme.disabled = true;
+        darkTheme.disabled = false;
+      } else {
+        lightTheme.disabled = false;
+        darkTheme.disabled = true;
+      }
+    });
+  </script>
+</body>
+</html>

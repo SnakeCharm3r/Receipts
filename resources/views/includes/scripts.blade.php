@@ -30,7 +30,7 @@
 <script src="{{ asset('js/uppy.min.js') }}"></script>
 <script src="{{ asset('js/quill.min.js') }}"></script>
 
-<script>
+{{-- <script>
   document.getElementById('theme-toggle').addEventListener('click', function() {
     // Get the two theme link elements
     var lightTheme = document.getElementById('lightTheme');
@@ -47,7 +47,7 @@
       this.textContent = 'Switch to Light Mode';  // Update button text
     }
   });
-</script>
+</script> --}}
 
 
 <script>

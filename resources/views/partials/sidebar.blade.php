@@ -6,9 +6,10 @@
   <nav class="vertnav navbar navbar-light">
       <!-- logo -->
       <div class="w-100 mb-4 d-flex">
-          <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="{{ url('/') }}">
-              <img src="{{ asset('assets/images/logo.svg') }}" alt="Logo" width="50" height="50">
-          </a>
+        <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="{{ url('/') }}">
+          <img src="{{ asset('images/logo.svg') }}" alt="Logo" width="50" height="50">
+      </a>
+      
       </div>
 
       <!-- Navigation Menu -->

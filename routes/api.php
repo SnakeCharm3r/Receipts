@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\ReceiptController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+// routes/api.php
+Route::get('/invoices', [InvoiceController::class, 'index']);
+Route::post('/invoices', [InvoiceController::class, 'store']);
+Route::delete('/invoices/{id}', [InvoiceController::class, 'destroy']);
